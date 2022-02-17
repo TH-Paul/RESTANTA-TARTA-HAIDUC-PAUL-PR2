@@ -9,7 +9,7 @@ public class Team {
     private String projektName;
     private List<Integer> listeMitarbeiter;
 
-    public Team(int id, String name, String projektName, List<Integer> listeMitarbeiter) {
+    public Team(int id, String name, String projektName) {
         this.id = id;
         this.name = name;
         this.projektName = projektName;
