@@ -8,9 +8,11 @@ import java.util.List;
 
 public class TeamController {
     private List<Team> listeTeams;
+    private MitarbeiterController mitarbeiterController;
 
-    public TeamController(){
+    public TeamController(MitarbeiterController mitarbeiterController){
         this.listeTeams = new ArrayList<>();
+        this.mitarbeiterController = mitarbeiterController;
     }
 
     public Team addTeam(int id, String name, String projektName){
@@ -44,5 +46,13 @@ public class TeamController {
                 return team;
         }
         return null;
+    }
+
+    public void addMitarbeiterToTeam(int idTeam, int idMitarbeiter){
+        for(Team team : listeTeams){
+            if(team.getId() == idTeam){
+                team.getListeMitarbeiter().add(idMitarbeiter);
+            }
+        }
     }
 }
