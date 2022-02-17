@@ -138,6 +138,7 @@ public class View {
         System.out.println("\nTeam updated with success!\n");
     }
 
+
     public static void showMenu() {
         System.out.println("\nMenu: ");
         System.out.println(" 0. Exit" + "\t\t\t\t\t\t\t\t\t\t\t\t8. Update team");

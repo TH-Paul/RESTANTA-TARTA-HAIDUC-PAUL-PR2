@@ -55,4 +55,16 @@ public class TeamController {
             }
         }
     }
+
+    public List<Team> filterByMitarbeiter(int id){
+        List<Team> filteredTeams = new ArrayList<>();
+        for(Team team : listeTeams){
+            for(int mitarbeiterId : team.getListeMitarbeiter()){
+                if(mitarbeiterId == id){
+                    filteredTeams.add(team);
+                }
+            }
+        }
+        return filteredTeams;
+    }
 }
